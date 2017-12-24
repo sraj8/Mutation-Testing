@@ -1,0 +1,40 @@
+group 'net.openhft'
+version '1.0-SNAPSHOT'
+
+apply plugin: 'java'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile 'net.openhft:zero-allocation-hashing:0.8'
+    compile group: 'org.apache.directory.server', name: 'apacheds-all', version: '1.5.5'
+    compile group: 'commons-collections', name: 'commons-collections', version: '3.2.1'
+    compile group: 'commons-configuration', name: 'commons-configuration', version: '1.6'
+    compile group: 'commons-lang', name: 'commons-lang', version: '2.5'
+    compile group: 'commons-logging', name: 'commons-logging', version: '1.1.1'
+    compile group: 'org.eclipse.core', name: 'org.eclipse.core.contenttype', version: '3.4.100'
+    compile group: 'org.mod4j.org.eclipse.core', name: 'jobs', version: '3.4.100'
+    compile group: 'org.eclipse.core', name: 'org.eclipse.core.resources', version: '3.7.100'
+    compile group: 'org.eclipse.core', name: 'org.eclipse.core.runtime', version: '3.6.0.v20100505'
+    compile group: 'org.eclipse.equinox', name: 'org.eclipse.equinox.common', version: '3.6.0.v20100503'
+    compile group: 'org.eclipse.jdt', name: 'org.eclipse.jdt.core', version: '3.10.0'
+    compile group: 'org.eclipse.osgi', name: 'org.eclipse.osgi', version: '3.5.2.R35x_v20100126'
+    compile group: 'org.eclipse.text', name: 'org.eclipse.text', version: '3.5.101'
+    compile group: 'javassist', name: 'javassist', version: '3.12.1.GA'
+    compile group: 'org.hamcrest', name: 'java-hamcrest', version: '2.0.0.0'
+    compile group: 'junit', name: 'junit', version: '4.12'
+    compile group: 'com.github.mkolisnyk', name: 'generex', version: '0.0.2'
+    testCompile group: 'com.google.guava', name: 'guava', version: '22.0'
+
+
+}
+
+test {
+    useTestNG(){
+        includeGroups 'unitTests'
+    }
+}
