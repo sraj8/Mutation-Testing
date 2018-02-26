@@ -1,7 +1,7 @@
 # Mutation Testing using Javassist #
 
 ## Steps for setting up the project ##
-- Checkout project from Bitbucket (https://bitbucket.org/sylvestersavioraj/akshay_vedpathak_mohammed_noman_mulla_sylvester_raj_hw3)
+
 - Open the project in Intellij
 - If you get the following error
 
